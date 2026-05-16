@@ -22,6 +22,22 @@ li {
   list-style: none;
 }
 
+.heading-lv2 {
+  color: #171100;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+
+.heading-lv3 {
+  color: #171100;
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 1.27;
+  letter-spacing: -0.76px;
+}
+
 .main-content {
   width: 1170px;
   margin-left: auto;
@@ -48,6 +64,24 @@ li {
 
 :root {
   --primary-color: #ffb900;
+}
+
+/* tránh vỡ giao diện */
+.line-clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: var(--line-clamp, 1);
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp.line2 {
+  -webkit-line-clamp: 2;
+  /* quá 2 dòng thì đoạn văn sẽ ... */
+}
+
+.break-all {
+  word-break: break-all;
+  /* tránh bị lòi ra văn bản */
 }
 /* header */
 
@@ -291,4 +325,139 @@ li {
 
 .hero .stats strong:nth-child(2) {
   margin-left: 28px;
+}
+
+/* popular */
+.popular-container {
+  padding: 65px 0;
+  background-color: #fff;
+  margin-top: 135px;
+}
+
+.popular-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-info .desc {
+  color: #5f5b53;
+  font-size: 1.8rem;
+  line-height: 1.67;
+  margin-top: 16px;
+  width: 458px;
+}
+
+.popular-btn-group {
+  display: flex;
+  gap: 18px;
+}
+
+.popular-btn-group .btn-control {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ffb900;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  color: #ffb900;
+  align-items: center;
+}
+
+.popular-btn-group .btn-control:hover {
+  background-color: #ffb900;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* popular bottom */
+.popular-courses {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 55px;
+  gap: 20px;
+}
+
+.popular-item {
+  height: auto;
+  border: 1px solid #e2dfda;
+  border-radius: 12px;
+  flex: 1;
+}
+
+.popular-item .thumb {
+  width: 100%;
+  object-fit: cover;
+}
+
+.popular-item:hover {
+  border-radius: 12px;
+  box-shadow: 0 18px 36px 0 rgba(0, 0, 0, 0.05);
+  border: 1px solid transparent;
+  background-color: #fff;
+}
+
+.popular-group {
+  padding: 16px 22px 22px;
+}
+
+.popular-group .btn a {
+  color: #fff;
+}
+
+.popular-group .heading-lv3 a {
+  color: #171100;
+}
+
+.popular-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popular-star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.popular-star span {
+  color: #fea31b;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.popular-group .desc-courses {
+  font-size: 1.4rem;
+  line-height: 1.67;
+  color: #5f5b53;
+  margin-top: 6px;
+}
+
+.courses-price {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.courses-price h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #171100;
+  line-height: 1.67;
+}
+
+.courses-price .btn-price {
+  width: 118px;
+  height: 50px;
+  font-weight: 600;
+  font-size: 1.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+.courses-price .btn-price:hover {
+  background-color: #ffb900;
 }
